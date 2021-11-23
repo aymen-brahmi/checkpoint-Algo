@@ -1,0 +1,18 @@
+ALGORITHM checkpoint
+VAR
+    nb_mots : Integer :=1;
+    nb_cr : Integer :=0;
+    nb_vow : Integer :=0;
+    C : CHAR:=''
+BEGIN
+    WHILE (C<>".") DO
+        nb_cr := nb_cr +1;
+    END_WHILE
+    IF (C='') THEN nb_mots:=nb_mots+1
+    END_IF
+    IF (C='a'OR C='e'OR C='i'OR C='O'OR C='u'OR C='y') THEN nb_vow:=nb_vow+1;
+    END_IF
+    write ("The number of caracters is", nb_cr);
+    write ("The number of words is", nb_mots);
+    write ("The number of vowels is ",nb_vow);
+END
